@@ -1,17 +1,11 @@
 import Field from "./Field";
 
 export default class InputField extends Field {
-    constructor() {
-        super();
+  constructor(settings) {
+    super(settings);
+  }
 
-    }
-
-
-    __renderControl(settings) {
-        const _html = `
-            <input type="text" name="${settings.name}" class="field-control" />
-        `;
-        return _html;
-    }
-
+  __renderControl(settings) {
+    return `<input type="text" name="${settings.name}" placeholder="${settings.placeholder || ''}" class="field-control" />`;
+  }
 }

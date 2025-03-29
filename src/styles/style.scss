@@ -1,0 +1,60 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  // TODO: Add a theme variable for the font family
+  color: rgba(0, 0, 0, 0.88);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  .field-container {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+
+    .field-control {
+      border: 1px solid #d9d9d9;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.88);
+      border-radius: 6px;
+      padding: 4px 11px;
+      line-height: 1.5715;
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+        border-color: #1677ff;
+        outline: 0;
+      }
+
+      &:hover {
+        border-color: #4096ff;
+      }
+    }
+
+    .field-label {
+      width: 300px;
+    }
+
+    .field-control-container {
+      width: 100%;
+
+      .error-msg {
+        color: #ff4d4f;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  button {
+    padding: 7px;
+    border-radius: 4px;
+    outline: 0;
+    box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+    cursor: pointer;
+    line-height: 1.5715;
+    border: none;
+    background-color: #1677ff;
+    color: #fff;
+  }
+}
